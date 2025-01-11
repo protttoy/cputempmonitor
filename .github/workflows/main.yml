@@ -19,6 +19,7 @@ jobs:
       with:
         host: fcltdbd.com
         username: cpy77mtp6og4
+        password: mbm123
         key: ${{ secrets.SFTP }}
         port: 22
         source: "./erp/.env.local"
