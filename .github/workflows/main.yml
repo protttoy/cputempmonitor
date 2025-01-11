@@ -17,10 +17,10 @@ jobs:
     - name: Upload files to GoDaddy via SFTP
       uses: appleboy/scp-action@v0.1.7
       with:
-        host: fcltdbd.com
-        username: cpy77mtp6og4
-        passphrase: mbm123
-        key: ${{ secrets.SFTP }}
+        host: "fcltdbd.com"
+        username: "cpy77mtp6og4"
+        passphrase: "mbm123"
+        key: $GLOBAL_VAR
         port: 22
         source: "./erp/.env.local"
         target: "/home/cpy77mtp6og4/public_html/erpreport.fcltdbd.com/testOut/"
