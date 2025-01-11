@@ -8,17 +8,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Use global environment variable
-      run: echo "Global variable is $GLOBAL_VAR"
     - name: Checkout Repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Upload files to GoDaddy via SFTP
       uses: appleboy/scp-action@v0.1.7
       with:
         host: "fcltdbd.com"
         username: "cpy77mtp6og4"
         passphrase: "mbm123"
-        key: ${{ vars.sftp }}
+        privateKey: ${{ vars.sftp }}
         port: 22
-        source: "./erp/.env.local"
-        target: "/home/cpy77mtp6og4/public_html/erpreport.fcltdbd.com/testOut/"
+        local: "./erp/.env.local"
+        target: "/home/cpy77mtp6og4/public_html/erpreport.fcltdbd.com/testOut/.env.local"
