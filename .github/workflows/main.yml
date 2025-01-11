@@ -19,7 +19,7 @@ jobs:
       with:
         host: fcltdbd.com
         username: cpy77mtp6og4
-        key: $GLOBAL_VAR
+        key: ${{ secrets.SFTP }}
         port: 22
         source: "./erp/.env.local"
         target: "/home/cpy77mtp6og4/public_html/erpreport.fcltdbd.com/testOut/"
