@@ -2,9 +2,7 @@ name: Test SFTP Connection and Upload
 
 on:
   workflow_dispatch: # Trigger workflow manually
-env:
-  GLOBAL_VAR: ${{ vars.sftp }}
-  
+
 jobs:
   upload-to-sftp:
     runs-on: ubuntu-latest
