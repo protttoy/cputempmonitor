@@ -11,7 +11,7 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
     - name: Upload files to GoDaddy via SFTP
-      uses: appleboy/scp-action@v0.1.7
+      uses: garygrossgarten/github-action-scp@release
       with:
         host: "fcltdbd.com"
         username: "cpy77mtp6og4"
