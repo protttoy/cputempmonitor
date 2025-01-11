@@ -1,0 +1,25 @@
+name: Test SFTP Connection and Upload
+
+on:
+  workflow_dispatch: # Trigger workflow manually
+env:
+  GLOBAL_VAR: ${{ vars.sftp }}
+  
+jobs:
+  upload-to-sftp:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Use global environment variable
+      run: echo "Global variable is $GLOBAL_VAR"
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+    - name: Upload files to GoDaddy via SFTP
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: "fcltdbd.com" # SFTP server (e.g., GoDaddy hosting server)
+        username: "cpy77mtp6og4"  # SFTP username
+        key: $GLOBAL_VAR  # Private SSH key to authenticate
+        port: 22  # Default SFTP port
+        source: "./erp/.env.local"  # Local files to upload
+        target: "/home/cpy77mtp6og4/public_html/erpreport.fcltdbd.com/testOut/"  # Remote directory
