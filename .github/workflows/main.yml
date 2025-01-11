@@ -17,9 +17,9 @@ jobs:
     - name: Upload files to GoDaddy via SFTP
       uses: appleboy/scp-action@v0.1.7
       with:
-        host: "fcltdbd.com" # SFTP server (e.g., GoDaddy hosting server)
-        username: "cpy77mtp6og4"  # SFTP username
-        key: $GLOBAL_VAR  # Private SSH key to authenticate
-        port: 22  # Default SFTP port
-        source: "./erp/.env.local"  # Local files to upload
-        target: "/home/cpy77mtp6og4/public_html/erpreport.fcltdbd.com/testOut/"  # Remote directory
+        host: fcltdbd.com
+        username: cpy77mtp6og4
+        key: $GLOBAL_VAR
+        port: 22
+        source: "./erp/.env.local"
+        target: "/home/cpy77mtp6og4/public_html/erpreport.fcltdbd.com/testOut/"
