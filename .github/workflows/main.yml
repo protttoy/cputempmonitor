@@ -19,4 +19,4 @@ jobs:
         privateKey: ${{ vars.sftp }}
         port: 22
         local: "./erp/.env.local"
-        target: "/home/cpy77mtp6og4/public_html/erpreport.fcltdbd.com/testOut/.env.local"
+        remote: "/home/cpy77mtp6og4/public_html/erpreport.fcltdbd.com/testOut/.env.local"
